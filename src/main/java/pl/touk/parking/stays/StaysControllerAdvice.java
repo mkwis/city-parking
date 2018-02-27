@@ -21,4 +21,11 @@ public class StaysControllerAdvice {
     VndErrors carNotFoundExceptionHandler(CarNotFoundException ex) {
         return new VndErrors("error", ex.getMessage());
     }
+
+    @ResponseBody
+    @ExceptionHandler(StayAlreadyStartedException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    VndErrors stayAlreadyStartedExceptionHandler(StayAlreadyStartedException ex) {
+        return new VndErrors("error", ex.getMessage());
+    }
 }
