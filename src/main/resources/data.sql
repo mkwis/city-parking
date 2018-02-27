@@ -1,0 +1,1 @@
+INSERT INTO Car VALUES (1, 'WSIX550', false)
